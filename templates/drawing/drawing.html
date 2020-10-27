@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+    {% include "user_navbar.html" %}
+{% else %}
+    {% include "navbar.html" %}
+{% endif %}
+
+<div class="drawing-page">
+    <h1 id="title">Catalog</h1>
+    <div class="container">
+        <div class="drawing-wrapper">
+            {% for drawing in drawings %}
+                <div class="drawing-box">
+                    <div class="image-box">
+                        <img data-id="{{drawing.id}}" class="image" src="{{drawing.image}}" alt="">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="drawing-big-screen">
+    <div class="bigScreen-wrapper">
+        <a id="drawing-link" href="">
+            <img id="big-screen" src="{% static 'images/writing.png' %}" alt="">
+        </a>
+    </div>
+    <div class="closeButton">&#x2716;</div>
+</div>
+
+{% include 'footer.html' %}
+
+<script src="{% static 'js/drawing.js' %}"></script>
+
+{% endblock content %}

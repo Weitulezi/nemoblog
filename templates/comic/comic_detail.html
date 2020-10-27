@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+    {% include "user_navbar.html" %}
+{% else %}
+    {% include "navbar.html" %}
+{% endif %}
+
+<div class="comic-detail-page">
+    <div class="wrapper">
+        <div class="title">
+            <h1 id="comicTitle" >{{comic.title}}</h1>
+        </div>
+        <div class="author">
+            <h4>{{comic.author_name}}</h4>
+        </div>
+        <div class="content">
+            {{comic.content|safe}}
+        </div>
+        <div class="comic-share">
+            <div class="container">
+                <!-- <a id="shareToFacebook" class="twitter-share-button" href="">
+                    <img id="twitter-icon" src="{% static 'images/facebook.png' %}" alt="">
+                </a> -->
+                <a id="shareToTwitter" class="twitter-share-button" href="">
+                    <img id="twitter-icon" data-title="{{comic.title}}" src="{% static 'images/twitter.png' %}" alt="">
+                </a>
+                <!-- Your share button code -->
+                <div class="fb-share-button" 
+                data-href="https://vandenemo.herokuapp.com/comic/{{comic.id}}" 
+                data-layout="button_count">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</div>
+
+{% include "footer.html" %}
+
+<script>
+    const shareToTwitter = document.getElementById("shareToTwitter")
+    shareToTwitter.addEventListener("click", (e) => {
+        e.preventDefault()
+        const target = e.target
+        const comicTitle = target.dataset.title
+        const currentPath = window.location.href
+        location.assign(`https://twitter.com/intent/tweet?text=${comicTitle}&url=${currentPath}`)
+    })
+</script>
+
+{% endblock content%}

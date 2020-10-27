@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="story-detail-page">
+    <div class="wrapper">
+        <div class="title">
+            <h1>{{story.title}}</h1>
+        </div>
+        <div class="author">
+            <h4>{{story.author.username}}</h4>
+        </div>
+        <div class="content">
+            {{story.content|safe}}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

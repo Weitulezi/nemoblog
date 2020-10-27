@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    font-family: 'Crimson Text', serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Zilla Slab', serif;
+}
+
+.maintenance-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.maintenance-page h1 {
+    font-weight: 100;
+    text-align: center;
+}
+
+.maintenance-page .goback {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.maintenance-page .goback a {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(43, 134, 134);
+}

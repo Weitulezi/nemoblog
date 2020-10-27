@@ -1,0 +1,36 @@
+.drawing-detail {
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.drawing-detail .wrapper {
+    margin: 0px auto;
+}
+
+.drawing-detail .title {
+    margin: 20px 0px;
+}
+
+.drawing-detail .title h1 {
+    text-align: center;
+}
+
+.drawing-detail .image-box {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.drawing-detail .image-box img {
+    margin: 0px auto;
+    max-width: 1000px;
+    max-height: 1000px;
+}
+
+.drawing-detail .description {
+    word-break: break-all;
+    width: 700px;
+    margin: 20px auto;
+}
+

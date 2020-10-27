@@ -1,0 +1,127 @@
+.writing-page {
+    display: flex;
+    justify-content: center;
+}
+
+.writing-page .wrapper {
+    width: 100%;
+}
+
+.writing-page .header {
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 35px 9px rgba(107, 107, 107, 0.75);
+    /* background-color: saddlebrown; */
+}
+
+/* .writing-page .header .title-wrapper {
+    padding: 8px 30px;
+    border-radius: 10px; 
+    padding: 2px 40px;
+    background-color: rgba(44, 44, 44, 0.8);
+    border: 5px white solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.writing-page .header h1 {
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    letter-spacing: 8px;
+    font-weight: 100;
+} */
+
+
+.writing-page .writing-wrapper {
+    width: 600px;
+    margin: 100px auto;
+    /* background-color: rgb(212, 212, 212); */
+}
+
+.writing-page .writing-wrapper .writing-box {
+    margin: 85px 0px;
+}
+
+.writing-page .writing-wrapper .title h1 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.writing-page .writing-wrapper .image-cover {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px;
+}
+
+.writing-page .writing-wrapper .image-cover img {
+    max-width: 600px;
+    max-height: 600px;
+    border: 1px solid rgb(180, 180, 180);
+}
+
+.writing-page .writing-wrapper .author h4 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.writing-page .writing-wrapper .content {
+    margin: 15px 0px;
+    word-break: break-all;
+}
+
+.writing-page .writing-wrapper .link {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.writing-page .writing-wrapper .link a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 8px;
+    margin: 10px 0px;
+}
+
+.writing-page .writing-wrapper .link a:hover {
+    background-color: rgb(41, 41, 41);
+    color: white;
+    border: 1px solid rgb(41, 41, 41);
+    
+}
+
+
+
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 400px) { 
+    .writing-page .header {
+        height: 25vh;
+    }
+
+    .writing-page .header h1 {
+        font-size: 20px;
+    }
+
+
+    .writing-page .writing-wrapper {
+        width: 290px;
+        margin: 100px auto;
+    }
+
+    .writing-page .writing-wrapper .image-cover img {
+        max-width: 290px;
+        max-height: 290px;
+        border: 1px solid rgb(180, 180, 180);
+    }
+    
+}
+

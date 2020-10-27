@@ -1,0 +1,116 @@
+.drawing-page {
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.drawing-page .container {
+    display: flex;
+    justify-content: center;
+}
+
+.drawing-page .drawing-wrapper {
+    padding: 20px;
+    margin: 40px auto;
+    /* background-color: aliceblue; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    /* box-shadow: 0px 0px 5px 7px rgba(184, 184, 184, 0.75); */
+    /* border: 1px solid rgb(190, 190, 190); */
+    /* border-radius: 5px; */
+}
+
+.drawing-page .drawing-box {
+    border-radius: 5px;
+    width: 250px;
+    height: 250px;
+    margin: 20px 15px;
+    box-sizing: border-box;
+}
+
+.drawing-page .image-box {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 10px 10px 5px 0px rgba(43, 43, 43, 0.75); */
+}
+
+.drawing-page .image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 10px 10px 5px 0px rgba(43, 43, 43, 0.75);
+    cursor: pointer;
+}
+
+.drawing-big-screen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+    background-color: white;
+}
+
+.drawing-big-screen .bigScreen-wrapper {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#big-screen {
+    margin: auto;
+    box-sizing: border-box;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 10px 10px 5px 4px rgba(49, 49, 49, 0.75);
+}
+
+.closeButton {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    top: 8vh;
+    right: 10vh;
+    position: absolute;
+    background-color: aliceblue;
+    font-size: 30px;
+    color: rgb(255, 57, 57);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 870px) {
+    .drawing-page .drawing-wrapper {
+        padding: 20px;
+        margin: 40px auto;
+        /* background-color: aliceblue; */
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .drawing-page .drawing-wrapper {
+        padding: 20px;
+        margin: 40px auto;
+        /* background-color: aliceblue; */
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+}

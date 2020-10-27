@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vande Nemo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Roboto+Condensed:wght@300&family=Zilla+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/maintenance.css' %}">
+</head>
+<body>
+    <div class="maintenance-page">
+        <div class="wrapper">
+            <h1>Masih dalam proses pengerjaan</h1>
+            <div class="goback">
+                <a class="back" href="">Back</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const backButton = document.querySelector(".back")
+        backButton.addEventListener("click", function(e) {
+            e.preventDefault()
+            history.back()
+        })
+    </script>
+</body>
+</html>

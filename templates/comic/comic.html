@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+    {% include "user_navbar.html" %}
+{% else %}
+    {% include "navbar.html" %}
+{% endif %}
+
+<div class="comic-page">
+    <div class="wrapper">
+        <div class="header" style="background-image: url({% static 'images/writing.png' %});">
+            <!-- EMPTY -->
+        </div>
+        <div class="comic-wrapper">
+            {% for comic in comics %}
+                <div class="comic-box">
+                    <div class="title">
+                        <h1>{{comic.title}}</h1>
+                    </div>
+                    <div class="image-box">
+                        <img src="{{comic.image_cover}}" alt="">
+                    </div>
+                    <div class="description">
+                        {{comic.description|safe}}
+                    </div>
+                    <div class="link">
+                        <a href="{% url 'comic_detail' comic.id %}">Read more</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
+
+{% endblock content%}

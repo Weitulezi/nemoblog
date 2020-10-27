@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+    {% include "user_navbar.html" %}
+{% else %}
+    {% include "navbar.html" %}
+{% endif %}
+
+<div class="writing-page">
+    <div class="wrapper">
+        <!-- <h1></h1> -->
+        <div class="header" style="background-image: url({% static 'images/writing.png' %});">
+            
+        </div>
+        <div class="writing-wrapper">
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
+
+<script src="{% static 'js/writing.js' %}"></script>
+{% endblock content%}

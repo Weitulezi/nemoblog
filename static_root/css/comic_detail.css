@@ -1,0 +1,143 @@
+.comic-detail-page {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.comic-detail-page .wrapper {
+    margin: 50px 0px;
+    width: 700px;
+}
+
+.comic-detail-page .title {
+    margin: 15px 0px;
+}
+
+.comic-detail-page .wrapper .title h1 {
+    text-align: center;
+    font-weight: 100;
+}
+
+.comic-detail-page .wrapper .author {
+    margin: 15px 0px;
+}
+
+.comic-detail-page .wrapper .author h4 {
+    text-align: center;
+}
+
+.comic-detail-page .wrapper .content {
+    word-break: break-all;
+}
+
+.comic-detail-page .wrapper .content img {
+    max-width: 700px;
+    max-height: 700px;
+}
+
+.comic-detail-page .wrapper .content p {
+    margin: 25px 0px;
+    line-height: 1.6;
+}
+
+.comic-share {
+    position: relative;
+}
+
+.comic-share .container {
+    position: fixed;
+    top: 325px;
+    left: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.comic-share a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px 0px;
+}
+
+.comic-share a  #twitter-icon {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 400px) { 
+    .comic-detail-page .wrapper {
+        margin: 50px 0px;
+        width: 100%;
+    }
+
+    .comic-detail-page .wrapper .content {
+        max-width: 290px;
+        margin: 0px auto;
+    }
+
+    .comic-detail-page .wrapper .content img {
+        max-width: 290px;
+        max-height: 290px;
+    }
+    
+    .comic-share {
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0px;
+    }
+    
+    .comic-share .container {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    .comic-share a {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0px 10px;
+    }
+    
+    .comic-share a  #twitter-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {     
+    .comic-share {
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0px;
+    }
+    
+    .comic-share .container {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    .comic-share a {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0px 10px;
+    }
+    
+    .comic-share a  #twitter-icon {
+        width: 50px;
+        height: 50px;
+    }
+}

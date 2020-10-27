@@ -1,0 +1,22 @@
+<div class="nav-wrapper">
+    <nav class="navbar">
+        <h3><a href="{% url 'index' %}">Home</a></h3>
+        <h3><a href="{% url 'writing' %}">Writing</a></h3>
+        <h3><a href="{% url 'comic' %}">Comics</a></h3>
+        <h3><a href="{% url 'drawing' %}">Drawing</a></h3>
+        <h3><a href="{% url 'about_view' %}">About</a></h3>
+        <h3 id="burger">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </h3>
+        <div class="newNav">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'writing' %}">Writing</a>
+            <a href="{% url 'comic' %}">Comics</a>
+            <a href="{% url 'drawing' %}">Drawing</a>
+            <a href="{% url 'about_view' %}">About</a>
+            <a id="closeNav" href="">&#x2716;</a>
+        </div>
+    </nav>
+</div>

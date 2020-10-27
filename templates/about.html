@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+    {% include "user_navbar.html" %}
+{% else %}
+    {% include "navbar.html" %}
+{% endif %}
+
+<div class="about-page">
+    <div class="wrapper">
+        {% comment %} <div class="header">
+            <img src="{% static 'images/redjohn.png' %}" alt="">
+        </div> {% endcomment %}
+        <div class="content">
+            {{about.content|safe}}
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
+
+{% endblock content %}

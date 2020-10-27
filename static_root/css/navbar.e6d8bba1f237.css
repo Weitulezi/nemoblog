@@ -1,0 +1,93 @@
+.nav-wrapper {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 10px 5px -8px rgba(0,0,0,0.75);
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0px 15px;
+    font-size: 20px;
+    color: rgb(75, 75, 75);
+}
+
+nav .block {
+    width: 10px;
+    height: 2px;
+}
+
+nav .newNav {
+    display: none;
+}
+
+nav #burger {
+    display: none;
+}
+
+
+@media only screen and (max-width: 500px) {
+    nav {
+        display: flex;
+        justify-content: space-around;
+        height: max-content;
+        padding: 5px;
+        align-items: center;
+    }
+
+    nav a {
+        text-decoration: none;
+        margin: 10px 0px;
+        font-size: 20px;
+        color: rgb(75, 75, 75);
+    }
+
+    nav h3 {
+        display: none;
+    }
+
+    nav #burger {
+        cursor: pointer;
+        display: block;
+    }
+
+    nav .block {
+        width: 5vh;
+        height: 3px;
+        background-color: rgb(94, 94, 94);
+        margin: 5px 0px;
+    }
+    
+    #closeNav {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav .newNav {
+        display: none;
+    }
+
+    /* nav .newNav a {
+        display: flex;
+        justify-content: center;
+        padding: 3px 15px;
+        background-color: black;
+        color: white;
+    } */
+    
+}

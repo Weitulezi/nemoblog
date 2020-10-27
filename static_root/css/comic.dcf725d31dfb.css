@@ -1,0 +1,157 @@
+.comic-page {
+    display: flex;
+    justify-content: center;
+}
+
+.comic-page .wrapper {
+    width: 100%;
+}
+
+.comic-page .header {
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .comic-page .header .title-wrapper {
+    padding: 8px 30px;
+    border-radius: 10px; 
+    padding: 2px 40px;
+    background-color: rgba(44, 44, 44, 0.8);
+    border: 5px white solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comic-page .header h1 {
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    letter-spacing: 8px;
+    font-weight: 100;
+} */
+
+
+.comic-page .comic-wrapper {
+    margin: 70px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.comic-page .comic-box {
+    width: 300px;
+    height: 100%;
+    margin: 35px 25px;
+    padding: 15px 15px;
+    /* border: 1px solid rgb(189, 189, 189); */
+}
+
+.comic-page .comic-box .image-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comic-page .comic-box .image-box img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.comic-page .comic-box .title {
+    margin-bottom: 10px;
+}
+
+.comic-page .comic-box .title h1 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.comic-page .comic-box .image-box {
+    margin: 10px 0px;
+}
+
+.comic-page .comic-box .description {
+    margin: 10px 0px;
+}
+
+.comic-page .comic-box .link {
+    display: flex;
+    justify-content: center;
+    /* margin: 25px; */
+}
+
+.comic-page .comic-box .link a{
+    text-align: center;
+    text-decoration: none;
+    padding: 3px 10px;
+    border: 1px solid rgb(43, 43, 43);;
+    color: rgb(43, 43, 43);
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.comic-page .comic-box .link a:hover {
+    background-color: rgb(54, 54, 54);
+    border: 1px solid rgb(54, 54, 54);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 400px) { 
+    .comic-page .header {
+        height: 25vh;
+    }
+
+    .comic-page .header .title-wrapper {
+        padding: 8px 0px;
+        border-radius: 10px; 
+        padding: 2px 40px;
+        background-color: rgba(44, 44, 44, 0.8);
+        border: 5px white solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .comic-page .header h1 {
+        font-size: 20px;
+    }
+
+    .comic-page .comic-wrapper {
+        width: 290px;
+        margin: 100px auto;
+    }
+
+    .comic-page .comic-wrapper .image-cover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .comic-page .comic-wrapper .image-cover img {
+        max-width: 290px;
+        max-height: 290px;
+        border: 1px solid rgb(180, 180, 180);
+    }
+
+    .comic-page .comic-box {
+        width: 290px;
+        height: 290%;
+        margin: 35px 0px;
+        padding: 15px 15px;
+        box-sizing:border-box;
+        /* border: 1px solid rgb(189, 189, 189); */
+    }
+    
+
+
+}

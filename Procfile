@@ -1,0 +1,1 @@
+web: gunicorn nemoblog.wsgi --log-file -

@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="index-page" >
+
+    <div class="bigBoxContainer"  style="background-image: url({% static 'images/karsa.png' %});">
+
+    </div>
+
+    <div class="header" style="background-image: url({% static 'images/nudityart.jpeg' %});">
+        <div id="headerTitle" class="wrapper">
+            <h1>Motive 404</h1>
+        </div>
+    </div>
+
+    <div class="writing-section" >
+        <div class="content">
+            <div class="text">
+                <h1>Writing</h1>
+                <p>I can shake off everything as i write. My sorrows disappear, my courage is reborn.</p>
+                <a href="/writing">Find more</a>
+            </div>
+            <div class="image" style="background-image: url({% static 'images/isaacnewton.png' %});">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="comic-section">
+        <div class="content">
+            <div class="image" style="background-image: url({% static 'images/karsa.png' %});">
+
+            </div>
+            <div class="text">
+                <h1>Comic</h1>
+                <p>Art is freedom. Being able to bend things most people see as straight line.</p>
+                <a href="/comic">Find more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="drawing-section">
+        <div class="content">
+            <div class="text">
+                <h1>Drawing</h1>
+                <p>Art is freedom. Being able to bend things most people see as straight line.</p>
+                <a href="/drawing">Find more</a>
+            </div>
+            <div class="image" style="background-image: url({% static 'images/novel1.png' %});">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="section">
+        <div class="container">
+            <div class="tag"><h1>Content</h1></div>
+            <div class="content">
+                <div class="box">
+                    <div class="title">
+                        <h1>Writing</h1>
+                    </div>
+                    <div class="image-box">
+                        <img src="{% static 'images/desk.png' %}" alt="">
+                    </div>
+                    <div class="text">
+                        <p>I can shake off everything as i write. My sorrows disappear, my courage is reborn.</p>
+                    </div>
+                    <div class="link">
+                        <a href="{% url 'writing' %}">Visit</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title">
+                        <h1>Comic</h1>
+                    </div>
+                    <div class="image-box">
+                        <img src="{% static 'images/newton.png' %}" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Art is freedom. Being able to bend things most people see as straight line</p>
+                    </div>
+                    <div class="link">
+                        <a href="{% url 'comic' %}">Visit</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title">
+                        <h1>Drawing</h1>
+                    </div>
+                    <div class="image-box">
+                        <img src="{% static 'images/D.jpeg' %}" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Art is freedom. Being able to bend things most people see as straight line</p>
+                    </div>
+                    <div class="link">
+                        <a href="{% url 'drawing' %}">Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="section-contact">
+        <div class="wrapper">
+            <div class="social-media">
+                <div class="image">
+                    <img src="{% static 'images/karsa.png' %}" alt="">
+                </div>
+                <div class="links">
+                    <h4>Social Media</h4>
+                    <div class="link">
+                        <img src="{% static 'images/instagram.png' %}" alt="">
+                        <a target="blank" href="https://www.instagram.com/motive404/">Motive404</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact">
+                <h1>Contact Me</h1>
+                <form id="contact-form" method="POST" action="">
+                    <p id="msg"></p>
+                    <label for="name">Name</label>
+                    <input type="text" required name="name" id="">
+                    <label for="email">Email</label>
+                    <input type="email" required name="email" id="">
+                    <label for="message">Message</label>
+                    <textarea name="message" required id="" cols="55" rows="10"></textarea>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
+
+<script src="{% static 'js/index.js' %}"></script>
+
+{% endblock content %}
