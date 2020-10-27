@@ -1,5 +1,4 @@
 
-// const curtainButton = document.querySelector(".curtainButton")
 const headerTitle = document.getElementById("headerTitle")
 const bigBoxContainer = document.querySelector(".bigBoxContainer")
 headerTitle.addEventListener("click", function(e) {
