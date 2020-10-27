@@ -1,6 +1,8 @@
+
+// const curtainButton = document.querySelector(".curtainButton")
 const headerTitle = document.getElementById("headerTitle")
 const bigBoxContainer = document.querySelector(".bigBoxContainer")
-headerTitle.addEventListener("mouseenter", function(e) {
+headerTitle.addEventListener("click", function(e) {
     console.log("mouse enter")
     let bigBox = `
         <div class="bigBox">
@@ -19,12 +21,12 @@ headerTitle.addEventListener("mouseenter", function(e) {
         </div>
     `
     bigBoxContainer.innerHTML = bigBox
-    $(".bigBoxContainer").slideDown(1200)
+    $(".bigBoxContainer").slideDown(1000)
     bigBoxContainer.style.display = "flex"
     bigBoxContainer.innerHTML += `<div class="closeBigBox">&#x2716;</div>`
     $(".closeBigBox").fadeIn(1000)
     $(".closeBigBox").click(function() {
-        $(".bigBoxContainer").slideUp(1200)
+        $(".bigBoxContainer").slideUp(1000)
         $(".closeBigBox").fadeOut(800)
     })
 })

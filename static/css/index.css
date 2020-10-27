@@ -5,6 +5,20 @@
     font-family: 'Zilla Slab', serif;
 }
 
+.index-page .curtainButton {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.index-page .curtainButton img {
+    width: 100%;
+    height: 100%;
+}
+
 .index-page .bigBoxContainer {
     display: none;
     position: fixed;
