@@ -30,7 +30,7 @@ DEBUG = False
 if DEBUG:
     ALLOWED_HOSTS = []
 else:
-    ALLOWED_HOSTS = ["motive404.herokuapp.com"]
+    ALLOWED_HOSTS = ["weitulezi.herokuapp.com"]
 
 
 # Application definition
