@@ -9,15 +9,18 @@ def comic_view(request):
 
 
 def comic_detail(request, pk):
-    comic = Comic.objects.get(pk=pk)    
-    try:
-        obj = ComicVisited.objects.get(comic=comic)
-        obj.addOne()
-        obj.save()
-    except:
-        obj = ComicVisited.objects.create(comic=comic)
-        obj.addOne()
-        obj.save()
+    comic = Comic.objects.get(pk=pk)
+    if request.user.is_authenticated:
+        print("DO NOTHING")
+    else:
+        try:
+            obj = ComicVisited.objects.get(comic=comic)
+            obj.addOne()
+            obj.save()
+        except:
+            obj = ComicVisited.objects.create(comic=comic)
+            obj.addOne()
+            obj.save()
     if comic.isPublic == False:
         return redirect("comic")
     context = {"comic": comic}

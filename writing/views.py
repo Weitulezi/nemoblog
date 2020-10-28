@@ -9,14 +9,17 @@ def writing_view(request):
 
 def writing_detail(request, pk):
     writing = Writing.objects.get(pk=pk)
-    try:
-        obj = WritingVisited.objects.get(writing=writing)
-        obj.addOne()
-        obj.save()
-    except:
-        obj = WritingVisited.objects.create(writing=writing)
-        obj.addOne()
-        obj.save()
+    if request.user.is_authenticated:
+        print("DO NOTHING")
+    else:
+        try:
+            obj = WritingVisited.objects.get(writing=writing)
+            obj.addOne()
+            obj.save()
+        except:
+            obj = WritingVisited.objects.create(writing=writing)
+            obj.addOne()
+            obj.save()
     if writing.isPublic == False:
         return redirect("writing")
     context = {"writing":writing}
