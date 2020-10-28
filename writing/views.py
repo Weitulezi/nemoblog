@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .models import Writing, WritingVisited
 
@@ -17,5 +17,7 @@ def writing_detail(request, pk):
         obj = WritingVisited.objects.create(writing=writing)
         obj.addOne()
         obj.save()
+    if writing.isPublic == False:
+        return redirect("writing")
     context = {"writing":writing}
     return render(request, "writing/writing_detail.html", context)

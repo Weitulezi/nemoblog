@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .models import Comic, ComicVisited
 
@@ -18,5 +18,7 @@ def comic_detail(request, pk):
         obj = ComicVisited.objects.create(comic=comic)
         obj.addOne()
         obj.save()
+    if comic.isPublic == False:
+        return redirect("comic")
     context = {"comic": comic}
     return render(request, "comic/comic_detail.html", context)
