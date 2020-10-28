@@ -80,15 +80,11 @@
 .index-page .writing-section .image {
     height: 400px;
     width: 400px;
-    background-color: saddlebrown;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 500px 500px;
+    background-size: 400px 400px;
 }
 
-.index-page .writing-section .image img {
-    background-color: saddlebrown;
-}
 
 .index-page .comic-section {
     min-height: 100vh;
@@ -117,7 +113,6 @@
 .index-page .comic-section .image {
     height: 400px;
     width: 400px;
-    background-color: saddlebrown;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px 500px;
@@ -169,15 +164,11 @@
 .index-page .drawing-section .image {
     height: 400px;
     width: 400px;
-    background-color: saddlebrown;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 500px 500px;
+    background-size: 400px 400px;
 }
 
-.index-page .drawing-section .image img {
-    background-color: saddlebrown;
-}
 
 .index-page .section {
     min-height: 100vh;
@@ -471,7 +462,7 @@
     .index-page .writing-section .image {
         max-height: 300px;
         max-width: 300px;
-        background-color: saddlebrown;
+        
         background-position: center;
         background-repeat: no-repeat;
         background-size: 300px 300px;
@@ -518,7 +509,7 @@
     .index-page .comic-section .image {
         max-height: 300px;
         max-width: 300px;
-        background-color: saddlebrown;
+        
         background-position: center;
         background-repeat: no-repeat;
         background-size: 300px 300px;
@@ -565,7 +556,7 @@
     .index-page .drawing-section .image {
         max-height: 300px;
         max-width: 300px;
-        background-color: saddlebrown;
+        
         background-position: center;
         background-repeat: no-repeat;
         background-size: 300px 300px;
