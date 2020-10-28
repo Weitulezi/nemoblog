@@ -5,7 +5,7 @@
 
 .about-page .wrapper {
     width: 800px;
-    margin-top: 45px;
+    margin-top: 5px;
 }
 
 .about-page .header {
@@ -25,7 +25,7 @@
 
 .about-page .content {
     width: 600px;
-    margin: 50px auto;
+    margin: 30px auto;
     word-break: break-all;
 }
 

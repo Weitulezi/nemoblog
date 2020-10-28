@@ -42,6 +42,7 @@ nav #burger {
 
 @media only screen and (max-width: 500px) {
     nav {
+        position: fixed;
         display: flex;
         justify-content: space-around;
         height: max-content;
@@ -88,5 +89,4 @@ nav #burger {
         background-color: black;
         color: white;
     } */
-    
 }

@@ -9,14 +9,14 @@
     <!-- FACEBOOK API -->
     <!-- FACEBOOK METADATA -->
     {% if writing %} 
-        <meta property="og:url"                content="https://vandenemo.herokuapp.com/writing/{{writing.id}}" />
+        <meta property="og:url"                content="https://motive404.herokuapp.com/writing/{{writing.id}}" />
         <meta property="og:type"               content="article" />
         <meta property="og:title"              content="{{writing.title}}" />
         <meta property="og:image"              content="{% static 'images/writing.png' %}" />
     {% endif %}
 
     {% if comic %}
-        <meta property="og:url"                content="https://vandenemo.herokuapp.com/comic/{{comic.id}}" />
+        <meta property="og:url"                content="https://motive404.herokuapp.com/comic/{{comic.id}}" />
         <meta property="og:type"               content="article" />
         <meta property="og:title"              content="{{comic.title}}" />
         <meta property="og:image"              content="{% static 'images/writing.png' %}" />
@@ -26,6 +26,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Roboto+Condensed:wght@300&family=Zilla+Slab&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/story_detail.css' %}">
@@ -44,6 +45,12 @@
 
 </head>
 <body>
+
+    <div class="bigBoxContainer"  style="background-image: url({% static 'images/karsapure2.png' %});">
+
+    </div>
+
+
 
     {% block content %}
     {% endblock content %}

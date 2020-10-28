@@ -5,62 +5,8 @@
     font-family: 'Zilla Slab', serif;
 }
 
-.index-page .curtainButton {
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-}
 
-.index-page .curtainButton img {
-    width: 100%;
-    height: 100%;
-}
 
-.index-page .bigBoxContainer {
-    display: none;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 500px 500px;
-    background-color: rgb(255, 255, 255);
-    /* background-color: rgb(255, 255, 133); */
-    justify-content: center;
-    align-items: center;
-    border-bottom: 4px solid rgb(58, 58, 58);
-}
-
-.index-page .bigBoxContainer .bigBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.index-page .bigBoxContainer .closeBigBox {
-    display: none;
-    position: fixed;
-    top: 50px;
-    right: 60px;
-    font-size: 30px;
-    color: rgb(94, 94, 94);
-    cursor: pointer;
-}
-
-.index-page .bigBoxContainer .bigBox a {
-    margin: 0px 15px;
-    font-size: 24px;
-    color: rgb(51, 51, 51);
-    padding: 3px 13px;
-    text-decoration: none;
-    border: 1px solid  rgb(116, 116, 116);
-    background-color: white;
-}
 
 .index-page .header {
     margin-bottom: 80px;
