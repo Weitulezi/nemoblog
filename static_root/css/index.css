@@ -44,132 +44,6 @@
     margin: 0px 15px;
 }
 
-.index-page .writing-section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.index-page .writing-section .content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 1000px;
-}
-
-.index-page .writing-section .content p {
-    font-size: 26px;
-    margin: 15px 0px;
-    line-height: 1.5;
-}
-
-.index-page .writing-section .content .text {
-    width: 600px;
-}
-
-.index-page .writing-section .content .text a {
-    color: black;
-    font-size: 19px;
-    /* letter-spacing: 2px; */
-    padding: 3px 15px;
-    text-decoration: none;
-    border: 2px solid rgb(95, 95, 95);
-}
-
-.index-page .writing-section .image {
-    height: 400px;
-    width: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 400px 400px;
-}
-
-
-.index-page .comic-section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.index-page .comic-section .content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 1000px;
-}
-
-.index-page .comic-section .content p {
-    font-size: 26px;
-    margin: 15px 0px;
-    line-height: 1.5;
-}
-
-.index-page .comic-section .content .text {
-    width: 500px;
-}
-
-.index-page .comic-section .image {
-    height: 400px;
-    width: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 500px 500px;
-}
-
-
-.index-page .comic-section .content .text a {
-    color: black;
-    font-size: 19px;
-    /* letter-spacing: 2px; */
-    padding: 3px 15px;
-    text-decoration: none;
-    border: 2px solid rgb(95, 95, 95);
-}
-
-.index-page .drawing-section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.index-page .drawing-section .content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 1000px;
-}
-
-.index-page .drawing-section .content p {
-    font-size: 26px;
-    margin: 15px 0px;
-    line-height: 1.5;
-}
-
-.index-page .drawing-section .content .text {
-    width: 500px;
-}
-
-.index-page .drawing-section .content .text a {
-    color: black;
-    font-size: 19px;
-    /* letter-spacing: 2px; */
-    padding: 3px 15px;
-    text-decoration: none;
-    border: 2px solid rgb(95, 95, 95);
-}
-
-.index-page .drawing-section .image {
-    height: 400px;
-    width: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 400px 400px;
-}
-
-
 .index-page .section {
     min-height: 100vh;
     padding: 50px;
@@ -177,8 +51,8 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    /* border-top: 5px solid rgb(112, 112, 112);
-    border-bottom: 5px solid rgb(112, 112, 112); */
+    border-top: 5px solid rgb(112, 112, 112);
+    border-bottom: 5px solid rgb(112, 112, 112);
 }
 
 .index-page .section .container {
@@ -230,7 +104,7 @@
 }
 
 .index-page .content .box .image-box {
-    width: 250px
+    width: 250px;
 }
 
 .index-page .content .box .image-box img {
@@ -420,153 +294,6 @@
     .index-page .header {
         width: 100%;
     }
-
-    /* WRITING SECTON */
-    .index-page .writing-section {
-        height: fit-content;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 2px black solid;
-    }
-    
-    .index-page .writing-section .content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 310px;
-    }
-    
-    .index-page .writing-section .content p {
-        font-size: 26px;
-        margin: 15px 0px;
-        line-height: 1.5;
-    }
-    
-    .index-page .writing-section .content .text {
-        max-width: 300px;
-        text-align: center;
-        margin: 40px 0px;
-    }
-    
-    .index-page .writing-section .content .text a {
-        color: black;
-        font-size: 19px;
-        /* letter-spacing: 2px; */
-        padding: 3px 15px;
-        text-decoration: none;
-        border: 2px solid rgb(95, 95, 95);
-    }
-    
-    .index-page .writing-section .image {
-        max-height: 300px;
-        max-width: 300px;
-        
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 300px 300px;
-    }
-    
-    /* COMIC SECTION */
-    .index-page .comic-section {
-        height: fit-content;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 2px black solid;
-    }
-    
-    .index-page .comic-section .content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 310px;
-    }
-    
-    .index-page .comic-section .content p {
-        font-size: 26px;
-        margin: 15px 0px;
-        line-height: 1.5;
-    }
-    
-    .index-page .comic-section .content .text {
-        max-width: 300px;
-        text-align: center;
-        margin: 40px 0px;
-    }
-    
-    .index-page .comic-section .content .text a {
-        color: black;
-        font-size: 19px;
-        /* letter-spacing: 2px; */
-        padding: 3px 15px;
-        text-decoration: none;
-        border: 2px solid rgb(95, 95, 95);
-    }
-    
-    .index-page .comic-section .image {
-        max-height: 300px;
-        max-width: 300px;
-        
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 300px 300px;
-    }
-
-    /* DRAWING */
-    .index-page .drawing-section {
-        height: fit-content;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 2px black solid;
-    }
-    
-    .index-page .drawing-section .content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 310px;
-    }
-    
-    .index-page .drawing-section .content p {
-        font-size: 26px;
-        margin: 15px 0px;
-        line-height: 1.5;
-    }
-    
-    .index-page .drawing-section .content .text {
-        max-width: 300px;
-        text-align: center;
-        margin: 40px 0px;
-    }
-    
-    .index-page .drawing-section .content .text a {
-        color: black;
-        font-size: 19px;
-        /* letter-spacing: 2px; */
-        padding: 3px 15px;
-        text-decoration: none;
-        border: 2px solid rgb(95, 95, 95);
-    }
-    
-    .index-page .drawing-section .image {
-        max-height: 300px;
-        max-width: 300px;
-        
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 300px 300px;
-    }
-
-
-
-
-
-
 
     .index-page .section {
         background-color: white;

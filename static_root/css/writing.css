@@ -10,7 +10,7 @@
 .writing-page .header {
     height: 80vh;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: top;
     display: flex;
     justify-content: center;

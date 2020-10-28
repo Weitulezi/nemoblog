@@ -2,7 +2,6 @@
 const headerTitle = document.getElementById("headerTitle")
 const bigBoxContainer = document.querySelector(".bigBoxContainer")
 headerTitle.addEventListener("click", function(e) {
-    console.log("mouse enter")
     let bigBox = `
         <div class="bigBox">
             <div class="link">
