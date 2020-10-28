@@ -9,7 +9,7 @@ def comic_view(request):
 
 
 def comic_detail(request, pk):
-    comic = Comic.objects.get(pk=pk)
+    comic = Comic.objects.get(pk=pk)    
     try:
         obj = ComicVisited.objects.get(comic=comic)
         obj.addOne()

@@ -60,8 +60,8 @@
 }
 
 .writing-page .writing-wrapper .image-cover img {
-    max-width: 600px;
-    max-height: 600px;
+    max-width: 400px;
+    max-height: 400px;
     border: 1px solid rgb(180, 180, 180);
 }
 
