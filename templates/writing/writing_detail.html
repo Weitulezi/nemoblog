@@ -33,7 +33,11 @@
                     <img id="twitter-icon" src="{% static 'images/facebook.png' %}" alt="">
                 </a> -->
                 <a id="shareToTwitter" class="twitter-share-button"  href="">
-                    <img id="twitter-icon" data-title="{{writing.title}}" src="{% static 'images/twitter.png' %}" alt="">
+                    <a class="twitter-share-button" data-size="large" 
+                    data-href="https://weitulezi.herokuapp.com/writing/{{writing.id}}"
+                    href="https://twitter.com/intent/tweet?text={{writing.title}}">
+                    Tweet</a>
+                    <!-- <img id="twitter-icon" data-title="{{writing.title}}" src="{% static 'images/twitter.png' %}" alt=""> -->
                 </a>
                 <!-- Your share button code -->
                 <div class="fb-share-button" 
@@ -59,7 +63,7 @@ fjs.parentNode.insertBefore(js, fjs);
 {% include 'footer.html' %}
 
 
-<script>
+<!-- <script>
     const shareToTwitter = document.getElementById("shareToTwitter")
     shareToTwitter.addEventListener("click", (e) => {
         e.preventDefault()
@@ -68,6 +72,6 @@ fjs.parentNode.insertBefore(js, fjs);
         const currentPath = window.location.href
         location.assign(`https://twitter.com/intent/tweet?text=${writingTitle}&url=${currentPath}`)
     })
-</script>
+</script> -->
 
 {% endblock content%}

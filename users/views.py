@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, Http404
 from django.http import JsonResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -38,3 +38,12 @@ def register_view(request):
 def logout_view(request):
     logout(request)
     return redirect("index")
+
+
+@login_required
+def admin_view(request):
+    if request.user.is_authenticated and request.user.is_superuser:
+        context = {}
+        return render(request, "user/admin.html", context)
+    else:
+        raise Http404
