@@ -9,27 +9,21 @@
     <!-- FACEBOOK API -->
     <!-- FACEBOOK NAD TWITTER METADATA -->
     {% if writing %} 
-        <meta property="og:url"                content="https://methaphora.herokuapp.com/writing/{{writing.id}}" />
+        <meta property="og:url"                content="https://metagius.herokuapp.com/writing/{{writing.id}}" />
         <meta property="og:type"               content="article" />
         <meta property="og:title"              content="{{writing.title}}" />
         <!-- <meta property="og:image"              content="{% static 'images/writing.png' %}" /> -->
 
-        <!-- <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@username">
-        <meta name="twitter:creator" content="@username">
-        <meta name="twitter:title" content="Some Title">
-        <meta name="twitter:description" content="Some description."> -->
-        <meta name="twitter:image" content="{{writing.image_cover}}">
     {% endif %}
 
     {% if comic %}
-        <meta property="og:url"                content="https://methaphora.herokuapp.com/comic/{{comic.id}}" />
+        <meta property="og:url"                content="https://metagius.herokuapp.com/comic/{{comic.id}}" />
         <meta property="og:type"               content="article" />
         <meta property="og:title"              content="{{comic.title}}" />
         <!-- <meta property="og:image"              content="{% static 'images/writing.png' %}" /> -->
     {% endif %}
         
-    <title>Methaphora</title>
+    <title>Metagius</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Roboto+Condensed:wght@300&family=Zilla+Slab&display=swap" rel="stylesheet">
 
