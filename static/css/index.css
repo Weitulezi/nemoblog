@@ -85,7 +85,6 @@
 
 .index-page .content .box {
     margin: 0px 20px;
-    /* border: 1px solid rgb(136, 136, 136); */
     width: 250px;
     padding: 15px 10px;
     border-radius: 10px;
@@ -320,12 +319,12 @@
     }
 
     .index-page .content .box {
-        margin: 0px 0px;
-        /* border: 1px solid rgb(136, 136, 136); */
+        border: 1px solid rgb(199, 199, 199);
+        margin: 20px 0px;
         width: 250px;
         padding: 15px 25px;
         border-radius: 10px;
-        /* box-shadow: 10px 10px 5px 0px rgba(100, 100, 100, 0.75); */
+        box-shadow: 2px 18px 21px -10px rgba(95, 95, 95, 0.75);
     }
 
     .index-page .content .box .link a {
