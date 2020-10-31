@@ -14,6 +14,12 @@
         <meta property="og:title"              content="{{writing.title}}" />
         <!-- <meta property="og:image"              content="{% static 'images/writing.png' %}" /> -->
 
+        
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta property="og:url" content="https://metagius.herokuapp.com/writing/{{writing.id}}" />
+        <meta property="og:title" content="{{writing.title}}" />
+        <meta property="og:description" content="{{writing.description}}" />
+        <meta property="og:image" content="{{writing.image_cover}}" />
     {% endif %}
 
     {% if comic %}
@@ -21,6 +27,12 @@
         <meta property="og:type"               content="article" />
         <meta property="og:title"              content="{{comic.title}}" />
         <!-- <meta property="og:image"              content="{% static 'images/writing.png' %}" /> -->
+
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta property="og:url" content="https://metagius.herokuapp.com/writing/{{writing.id}}" />
+        <meta property="og:title" content="{{comic.title}}" />
+        <meta property="og:description" content="{{comic.description}}" />
+        <meta property="og:image" content="{{comic.image_cover}}" />
     {% endif %}
         
     <title>Metagius</title>
