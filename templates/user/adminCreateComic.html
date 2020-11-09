@@ -1,0 +1,32 @@
+{% extends "user/adminBase.html" %}
+
+{% load static %}
+
+{% block adminContent %}
+
+<div class="adminCreateComicPage">
+    <div class="container">
+        <form id="form" action="" method="POST">
+            {% csrf_token %}
+            <h3>Choose author</h3>
+            <input type="text" id="searchAuthorInput">
+            <div class="searchResult">
+
+            </div>
+            <h3>Author</h3>
+            <div class="toBeAuthor">
+
+            </div>
+            {% for field in form %}
+                {{form.media}}
+                {{field.label_tag}}
+                {{field}}
+            {% endfor %}
+            <button id="submitButton" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script src="{% static 'js/admin/adminCreateComic.js' %}"></script>
+
+{% endblock adminContent %}

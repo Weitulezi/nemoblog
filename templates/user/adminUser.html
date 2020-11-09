@@ -1,0 +1,177 @@
+{% extends "user/adminBase.html" %}
+
+{% load static %}
+
+{% block adminContent %}
+
+<div class="adminUserPage">
+    <div class="container">
+        <div class="searchUser">
+            <h3>Search User</h3>
+            <form action="">
+                <input id="searchuUserInput" type="text" name="username" id="">
+            </form>
+            <div class="searchResult">
+
+            </div>
+            <!-- <button type="submit" id="buttonFind">Find</button> -->
+            <div class="userList">
+
+            </div>
+        </div>
+        <div class="deleteUserBox">
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    const csrftoken = getCookie('csrftoken');
+
+    function loadUsers() {
+        fetch(`/api/user/`)
+        .then(res => res.json())
+        .then(data => {
+            let users = data
+            constructUserBox(users)
+        })
+    }
+    loadUsers()
+
+    function constructUserBox(users) {
+        let userListWrapper = document.querySelector(".userList")
+        for(let i=0; i<users.length; i++) {
+            let box = `
+                <div class="userBox">
+                    <div class="username">${users[i].username}</div>
+                    <div class="action">
+                        <a href="/admin/user/${users[i].username}">Edit</a>
+                        <button data-username="${users[i].username}" class="deleteUser">Delete</button>
+                    </div>
+                </div>
+            `
+            userListWrapper.innerHTML += box
+            let deleteButtons = document.querySelectorAll(".deleteUser")
+            deleteButtons.forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    e.preventDefault()
+                    deleteUser(e.target.dataset.username)
+                })
+            })
+        }
+    }
+
+    let searchuUserInput = document.getElementById("searchuUserInput")
+    searchuUserInput.addEventListener("input", function(e) {
+        let username = e.target.value
+        if (username === "") {
+            let userListWrapper = document.querySelector(".userList")
+            userListWrapper.innerHTML = ""
+            loadUsers()
+        } else {
+            fetch(`/api/user/search/${username}`)
+            .then(res => res.json())
+            .then(data => {
+                if(data.message) {
+                    let userListWrapper = document.querySelector(".userList")
+                    userListWrapper.innerHTML = `${data.message}`
+                } else {
+                    let users = data
+                    constructSearchResult(users)
+                }
+            })
+        }
+    })
+
+    function constructSearchResult(users) {
+        let userListWrapper = document.querySelector(".userList")
+        userListWrapper.innerHTML = ""
+        for(let i=0; i<users.length; i++) {
+            let box = `
+                <div class="userBox">
+                    <div class="username">${users[i].username}</div>
+                    <div class="action">
+                        <a href="/admin/user/${users[i].username}">Edit</a>
+                        <button data-username="${users[i].username}" class="deleteUser">Delete</button>
+                    </div>
+                </div>
+            `
+            userListWrapper.innerHTML += box
+            let deleteButtons = document.querySelectorAll(".deleteUser")
+            deleteButtons.forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    e.preventDefault()
+                    deleteUser(e.target.dataset.username)
+                })
+            })
+        }
+    }
+
+    function deleteUser(data) {
+        const username = data
+        let deleteUserBox = document.querySelector(".deleteUserBox")
+        let box = `
+            <div class="deleteConfirm">
+                <div class="optionWrapper">
+                    <h3>Are you sure?</h3>
+                    <div class="option">
+                        <button id="yes">Yes</button>
+                        <button id="no">No</button>
+                    </div>
+                </div>
+            </div>
+        `
+        deleteUserBox.innerHTML += box
+        deleteUserBox.style.display = "flex"
+
+        let yesButton = document.getElementById("yes")
+        let noButton = document.getElementById("no")
+        // DELETE USER
+        yesButton.addEventListener("click", function(e) {
+            e.preventDefault()
+            fetch(`/api/user/${username}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": csrftoken
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.success) {
+                    let userListWrapper = document.querySelector(".userList")
+                    userListWrapper.innerHTML = ""
+                    loadUsers()
+                    alert(`${data.message}`)
+                } else {
+                    alert(`${data.message}`)
+                }
+            })
+            deleteUserBox.innerHTML = ""
+            deleteUserBox.style.display = "none"
+        })
+        // CANCE DELETE
+        noButton.addEventListener("click", (e) => {
+            e.preventDefault()
+            deleteUserBox.innerHTML = ""
+            deleteUserBox.style.display = "none"
+        })
+    }
+</script>
+
+{% endblock %}

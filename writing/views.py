@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect
 
-from .models import Writing, WritingVisited
+from .models import Writing
+from users.models import ContentAuthor
+from .utils import getPopularWriting, getWritingauthor
 
 def writing_view(request):
+    mostPopularWriting = getPopularWriting()
     context = {}
     return render(request, "writing/writing.html", context)
 
@@ -12,15 +15,9 @@ def writing_detail(request, pk):
     if request.user.is_authenticated:
         print("DO NOTHING")
     else:
-        try:
-            obj = WritingVisited.objects.get(writing=writing)
-            obj.addOne()
-            obj.save()
-        except:
-            obj = WritingVisited.objects.create(writing=writing)
-            obj.addOne()
-            obj.save()
+        writing.addViewCount()
+        writing.save()
     if writing.isPublic == False:
         return redirect("writing")
-    context = {"writing":writing}
+    context = {"writing":writing, "id": pk}
     return render(request, "writing/writing_detail.html", context)

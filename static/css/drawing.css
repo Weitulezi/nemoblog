@@ -58,12 +58,14 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 100vh;
     bottom: 0px;
     top: 0px;
     left: 0;
     position: fixed;
+    /* background-color: rgb(235, 222, 104); */
     background-color: white;
+    border-bottom: 5px solid rgb(92, 92, 92);
 }
 
 .drawing-big-screen .bigScreen-wrapper {

@@ -1,0 +1,175 @@
+{% extends 'user/adminBase.html' %}
+{% load static %}
+
+{% block adminContent %}
+
+<div class="adminWritingPage">
+    <div class="deleteWritingBox"></div>
+    <div class="container">
+        <h2>Search Writing</h2>
+        <input type="text" class="searchWritingInput" name="" id="">
+        <div class="writingListWrapper">
+
+        </div>
+        <a id="createWriting" href="/admin/create/writing/">Create Writing</a>
+    </div>
+</div>
+
+<script>
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    const csrftoken = getCookie('csrftoken');
+
+    function loadWriting() {
+        fetch(`/api/writing`)
+        .then(res => res.json())
+        .then(data => {
+            let writings = data
+            constructWritingBox(writings)
+        })
+    }
+    loadWriting()
+
+    function constructWritingBox(writings) {
+        let writingListWrapper = document.querySelector(".writingListWrapper")
+        for(let i=0; i<writings.length; i++) {
+            let box = `
+                <div class="writingBox">
+                    <div class="writingTitle">
+                        ${writings[i].title}
+                    </div>
+                    <div class="action">
+                        <a href="/admin/writing/${writings[i].id}">Edit</a>
+                        <button data-id="${writings[i].id}" data-title="${writings[i].title}" class="deleteWriting">Delete</button>
+                    </div>
+                </div>
+            `
+            writingListWrapper.innerHTML += box
+        }
+
+        let deleteButtons = document.querySelectorAll(".deleteWriting")
+        deleteButtons.forEach(btn => {
+            btn.addEventListener("click", function(e) {
+                e.preventDefault()
+                deleteWriting(e.target.dataset.id)
+            })
+        })
+    }
+
+    // Searh Writing
+    let searchWritingInput = document.querySelector(".searchWritingInput")
+    searchWritingInput.addEventListener("input", (e) => {
+        e.preventDefault()
+        let writingListWrapper = document.querySelector(".writingListWrapper")
+        let title = e.target.value
+        if(title === "") {
+            writingListWrapper.innerHTML = ""
+            loadWriting()
+        }  else {
+            fetch(`/api/writing/search/${title}`)
+            .then(res => res.json())
+            .then(data => {
+                if(data.message) {
+                    let message = data.message
+                    writingListWrapper.innerHTML = message
+                } else {
+                    let writings = data
+                    writingListWrapper.innerHTML = ""
+                    constructSearchWriting(writings)
+                }
+            })
+        }
+    })
+
+    function constructSearchWriting(writings) {
+        let writingListWrapper = document.querySelector(".writingListWrapper")
+        for(let i=0; i<writings.length; i++) {
+            let box = `
+                    <div class="writingBox">
+                        <div class="writingTitle">
+                            ${writings[i].title}
+                        </div>
+                        <div class="action">
+                            <a href="/admin/writing/${writings[i].id}">Edit</a>
+                            <button data-id="${writings[i].id}" data-title="${writings[i].title}" class="deleteWriting">Delete</button>
+                        </div>
+                    </div>
+                `
+                writingListWrapper.innerHTML += box
+            }
+        let deleteButtons = document.querySelectorAll(".deleteWriting")
+        deleteButtons.forEach(btn => {
+            btn.addEventListener("click", function(e) {
+                e.preventDefault()
+                deleteWriting(e.target.dataset.id)
+            })
+        })
+    }
+
+    function deleteWriting(id) {
+        let writingListWrapper = document.querySelector(".writingListWrapper")
+        let deleteWritingBox = document.querySelector(".deleteWritingBox")
+        let box = `
+            <div class="deleteConfirm">
+                <div class="optionWrapper">
+                    <h3>Are you sure?</h3>
+                    <div class="option">
+                        <button id="yes">Yes</button>
+                        <button id="no">No</button>
+                    </div>
+                </div>
+            </div>
+        `
+        deleteWritingBox.innerHTML += box
+        deleteWritingBox.style.display = "flex"
+
+        let yesButton = document.getElementById("yes")
+        let noButton = document.getElementById("no")
+
+        // DELETE USER
+        yesButton.addEventListener("click", function(e) {
+            e.preventDefault()
+            fetch(`/api/writing/${id}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": csrftoken
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.success) {
+                    writingListWrapper.innerHTML = ""
+                    loadWriting()
+                    alert(`${data.message}`)
+                } else {
+                    alert(`${data.message}`)
+                }
+            })
+            deleteWritingBox.innerHTML = ""
+            deleteWritingBox.style.display = "none"
+        })
+        // CANCE DELETE
+        noButton.addEventListener("click", (e) => {
+            e.preventDefault()
+            deleteWritingBox.innerHTML = ""
+            deleteWritingBox.style.display = "none"
+        })
+    }
+
+</script>
+
+{% endblock %}

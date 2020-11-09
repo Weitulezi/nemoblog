@@ -16,16 +16,6 @@ class ContactMessage(models.Model):
         return self.name
 
 
-class Drawing(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.TextField()
-    image = models.TextField()
-    isPublic = models.BooleanField(default=False)
-    description = RichTextField()
-    created_at = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return self.title
 
-    def author_name(self):
-        return self.author.username
+        

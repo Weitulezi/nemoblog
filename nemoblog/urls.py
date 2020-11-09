@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include("page.urls")),
     path('', include("writing.urls")),
     path('', include("comic.urls")),
+    path('', include("drawing.urls")),
     path('', include("users.urls")),
 ]
 

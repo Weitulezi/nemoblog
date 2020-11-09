@@ -1,0 +1,119 @@
+.adminWritingPage .container {
+    margin: 25px;
+    min-height: 100vh;
+}
+
+.adminWritingPage .searchWritingInput {
+    width: 700px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(139, 139, 139);
+}
+
+.adminWritingPage .writingListWrapper {
+    margin-bottom: 20px;
+}
+
+.adminWritingPage .writingBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    background-color: rgb(255, 190, 104);;
+    padding: 8px 10px;
+    margin: 10px 0px;
+}
+
+.adminWritingPage .writingTitle {
+    color: rgb(65, 65, 65);
+    font-size: 20px;
+}
+
+.adminWritingPage .action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adminWritingPage .action a {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: none;
+    background-color: rgb(88, 144, 197);
+    margin-right: 3px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.adminWritingPage .action button {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: none;
+    background-color: rgb(255, 62, 62);
+    color: white;
+    border-radius: 5px;
+}
+
+.adminWritingPage .deleteWritingBox {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+.adminWritingPage .deleteWritingBox .deleteConfirm {
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    border: 4px solid rgb(63, 63, 63);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adminWritingPage .deleteConfirm .optionWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.adminWritingPage .deleteConfirm button {
+    margin: 0px 10px;
+    font-size: 22px;
+    padding: 3px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.adminWritingPage .deleteConfirm #yes {
+    background-color: rgb(255, 62, 62);
+    color: white;
+}
+
+.adminWritingPage .deleteConfirm #no {
+    background-color: royalblue;
+    color: white;
+}
+
+.adminWritingPage #createWriting {
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 4px 14px;
+    background-color: royalblue;
+    color: white;
+}

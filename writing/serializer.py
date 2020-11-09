@@ -1,13 +1,14 @@
 from rest_framework import serializers
 from .models import Writing
+from users.serializer import ContentAuthorSerializer
 
 class WritingSerializer(serializers.ModelSerializer):
+    author = ContentAuthorSerializer(many=True, read_only=True)
     class Meta:
         model = Writing
         fields = [
             "id",
             "author",
-            "author_name",
             "title",
             "image_cover",
             "description",
@@ -15,3 +16,4 @@ class WritingSerializer(serializers.ModelSerializer):
             "isPublic",
             "created_at",
         ]
+

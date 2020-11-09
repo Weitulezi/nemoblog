@@ -12,35 +12,27 @@
 
 
 <div class="writing-detail-page">
-    <div class="wrapper">
-        <div class="title">
-            <h1 id="writingTitle">{{writing.title}}</h1>
-        </div>
-        {% if writing.image_cover != "" %}
-            <div class="image-cover">
-                <img src="{{writing.image_cover}}" alt="">
-            </div>
-        {% endif %}
-        <div class="author">
-            <h4>Oleh {{writing.author_name}}</h4>
-        </div>
-        <div class="content">
-            {{writing.content|safe}}
-        </div>
-        <div class="writing-share">
-            <div class="container">
-                <a id="shareToTwitter" class="twitter-share-button"  href="">
-                    <img id="twitter-icon" data-title="{{writing.title}}" src="{% static 'images/twitter.png' %}" alt="">
-                </a>
-                <!-- Your share button code -->
-                <div class="fb-share-button" 
-                data-href="https://metagius.herokuapp.com/writing/{{writing.id}}" 
-                data-layout="button_count">
-                </div>
+    <div id="writingId" data-id="{{id}}" style="display: none;"></div>
+    <div id="writingBox" class="wrapper">
+    
+    </div>
+    <div class="writing-share">
+        <div class="container">
+            <a id="shareToTwitter" class="twitter-share-button"  href="">
+                <img id="twitter-icon" data-title="{{writing.title}}" src="{% static 'images/twitter.png' %}" alt="">
+            </a>
+            <!-- Your share button code -->
+            <div class="fb-share-button" 
+            data-href="https://metagius.herokuapp.com/writing/{{writing.id}}" 
+            data-layout="button">
             </div>
         </div>
     </div>
 </div>
+
+{% include 'footer.html' %}
+
+<script src="{% static 'js/writing_detail.js' %}"></script>
 
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
@@ -51,10 +43,6 @@ js = d.createElement(s); js.id = id;
 js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
-
-{% include 'footer.html' %}
-
 
 <script>
     const shareToTwitter = document.getElementById("shareToTwitter")

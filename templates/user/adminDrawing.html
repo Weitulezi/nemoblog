@@ -1,0 +1,21 @@
+{% extends 'user/adminBase.html' %}
+
+{% load static %}
+
+{% block adminContent %}
+
+<div class="adminDrawingPage">
+    <div class="deleteDrawingBox"></div>
+    <div class="container">
+        <h2>Search Drawing</h2>
+        <input type="text" class="searchDrawingInput" name="" id="">
+        <div class="drawingListWrapper">
+
+        </div>
+        <a class="linkToCreateDrawing" href="/admin/create/drawing">Create Drawing</a>
+    </div>
+</div>
+
+<script src="{% static 'js/admin/adminDrawing.js' %}"></script>
+
+{% endblock %}

@@ -1,0 +1,150 @@
+.adminBasePage .adminNav {
+    background-color: rgb(59, 59, 59);
+}
+
+.adminBasePage .body {
+    display: flex;
+}
+
+.adminBasePage .leftBar {
+    flex: 20%;
+    background-color: rgb(255, 255, 255);
+    border-right: 2px solid rgb(59, 59, 59);
+}
+
+.adminBasePage .leftBar {
+    display: flex;
+    flex-direction: column;
+}
+
+.adminBasePage .leftBar a {
+    text-decoration: none;
+}
+
+
+.adminBasePage .leftBar .link {
+    text-align: center;
+    /* background-color: saddlebrown; */
+    padding: 15px 0px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: rgb(59, 59, 59);;
+}
+
+.adminBasePage .leftBar .link:hover {
+    background-color: rgb(59, 59, 59);
+    color: white;
+}
+
+.adminBasePage .rightBar {
+    flex: 80%;
+}
+
+.adminBasePage .adminNav .wrapper {
+    display: flex;
+    width: 80%;
+    height: 10vh;
+    margin: 0px auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(59, 59, 59);;
+}
+
+.adminBasePage .adminNav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adminBasePage .adminNav .logo img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.adminBasePage .adminNav .logo a {
+    text-decoration: none;
+    color: rgb(233, 217, 127);
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.adminBasePage .adminNav .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adminBasePage .adminNav .link h3 {
+    text-decoration: none;
+    font-weight: 100;
+    letter-spacing: 2px;
+    color: rgb(233, 217, 127);
+    font-size: 17px;
+    margin: 0px 10px;
+}
+
+.adminBasePage .adminNav .link a {
+    text-decoration: none;
+    color: rgb(233, 217, 127);
+    font-size: 17px;
+    margin: 0px 10px;
+    letter-spacing: 2px;
+}
+
+.adminBasePage .adminLogoutBox {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+.adminBasePage .adminLogoutBox .logoutConfirm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 4px solid rgb(87, 87, 87);
+    border-radius: 10px;
+    background-color: white;
+    width: 300px;
+    height: 200px
+}
+
+.adminBasePage .adminLogoutBox .logoutConfirm h3 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.adminBasePage .adminLogoutBox .logoutConfirm a {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(255, 69, 69);
+    padding: 3px 14px;
+    border-radius: 5px;
+}
+
+.adminBasePage .adminLogoutBox .logoutConfirm .logoutNo {
+    cursor: pointer;
+    color: white;
+    background-color: royalblue;
+    padding: 3px 14px;
+    border-radius: 5px;
+}
+
+/* ADMIN PAGE */
+.adminPage {
+    min-height: 90vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}

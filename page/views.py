@@ -3,7 +3,7 @@ from django.http import JsonResponse
 
 import json
 
-from .models import About, ContactMessage, Drawing
+from .models import About, ContactMessage
 
 def index(request):
     context = {}
@@ -32,21 +32,6 @@ def handle_contact_form(request):
             "msg": "Thanks for your message!",
             "success": True
         }, safe=False)
-
-
-def drawingList_view(request):
-    drawings = Drawing.objects.all().filter(isPublic=True).order_by("-id")
-    context = {"drawings":drawings}
-    return render(request, "drawing/drawing.html", context)
-
-
-def drawing_detail(request, pk):
-    try:
-        drawing = Drawing.objects.get(pk=pk)
-    except:
-        raise Http404
-    context = {"drawing": drawing}
-    return render(request, "maintenance.html", context)
 
 
 

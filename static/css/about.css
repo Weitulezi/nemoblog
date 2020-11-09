@@ -46,12 +46,12 @@
 @media only screen and (max-width: 600px) {
     .about-page .wrapper {
         width: 280px;
-        margin-top: 45px;
+        margin-top: 5px;
     }
 
     .about-page .content {
         width: 280px;
-        margin: 50px auto;
+        margin: 5px auto 50px auto;
         word-break: break-all;
     }
 

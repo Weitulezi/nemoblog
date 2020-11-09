@@ -140,7 +140,14 @@
 }
 
 
-
+/* CONTRIBUTE SECTION */
+.index-page .contributeSection {
+    min-height: 100vh;
+    border-bottom: 5px solid rgb(112, 112, 112);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /* CONTACT SECTION */

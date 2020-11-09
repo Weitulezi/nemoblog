@@ -1,0 +1,97 @@
+.adminCreateDrawingPage .container {
+    min-height: 90vh;
+    margin: 10vh 40px;
+}
+
+.adminCreateDrawingPage #searchAuthorInput {
+    width: 700px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(139, 139, 139);
+}
+
+.adminCreateDrawingPage #id_title {
+    width: 100px;
+    height: 500px;
+    padding: 0px 10px;
+}
+
+.adminCreateDrawingPage textarea, label, input {
+    display: block;
+    margin: 10px 0px;
+}
+
+.adminCreateDrawingPage .authorResultBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    background-color: rgb(255, 190, 104);;
+    padding: 8px 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+
+.adminCreateDrawingPage .addAuthor {
+    background-color: royalblue;
+    border-radius: 5px;
+    padding: 6px 7px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.adminCreateDrawingPage .authorBox {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    background-color: rgb(255, 190, 104);;
+    color: rgb(54, 54, 54);
+}
+
+.adminCreateDrawingPage .removeAuthor {
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgb(255, 62, 62);
+    color: white;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.adminCreateDrawingPage #searchAuthor {
+    width: 700px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(139, 139, 139);
+}
+
+.adminCreateDrawingPage #id_title  {
+    width: 700px;
+    height: 40px;
+    padding: 0px 10px;
+}
+
+.adminCreateDrawingPage #submitButton {
+    display: flex;
+    width: 100%;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(243, 192, 96);
+    color: rgb(73, 73, 73);
+    padding: 8px 0px;
+    font-size: 20px;
+    cursor: pointer;
+}
+

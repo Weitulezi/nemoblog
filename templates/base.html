@@ -9,7 +9,7 @@
     <!-- FACEBOOK API -->
     <!-- FACEBOOK NAD TWITTER METADATA -->
     {% if writing %} 
-        <meta property="og:url"                content="https://metagius.herokuapp.com/writing/{{writing.id}}" />
+        <meta id="url" property="og:url"                content="https://metagius.herokuapp.com/writing/{{writing.id}}" />
         <meta property="og:type"               content="article" />
         <meta property="og:title"              content="{{writing.title}}" />
         <!-- <meta property="og:image"              content="{% static 'images/writing.png' %}" /> -->
@@ -29,7 +29,7 @@
         <!-- <meta property="og:image"              content="{% static 'images/writing.png' %}" /> -->
 
         <meta name="twitter:card" content="summary_large_image"></meta>
-        <meta property="og:url" content="https://metagius.herokuapp.com/writing/{{writing.id}}" />
+        <meta property="og:url" content="https://metagius.herokuapp.com/comic/{{comic.id}}" />
         <meta property="og:title" content="{{comic.title}}" />
         <meta property="og:description" content="{{comic.description}}" />
         <meta property="og:image" content="{{comic.image_cover}}" />
@@ -40,6 +40,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Roboto+Condensed:wght@300&family=Zilla+Slab&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authorPage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adminUser.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adminWriting.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adminCreateWriting.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adminComic.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adminCreateComic.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adminDrawing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adminCreateDrawing.css' %}">
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/story_detail.css' %}">

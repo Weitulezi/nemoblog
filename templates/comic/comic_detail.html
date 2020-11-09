@@ -12,15 +12,10 @@
 
 
 <div class="comic-detail-page">
+    <div id="comicId" style="display: none;" data-id="{{id}}" ></div>
     <div class="wrapper">
-        <div class="title">
-            <h1 id="comicTitle" >{{comic.title}}</h1>
-        </div>
-        <div class="author">
-            <h4>{{comic.author_name}}</h4>
-        </div>
-        <div class="content">
-            {{comic.content|safe}}
+        <div class="comicWrapper">
+            
         </div>
         <div class="comic-share">
             <div class="container">
@@ -50,6 +45,8 @@
 </div>
 
 {% include "footer.html" %}
+
+<script src="{% static 'js/comic_detail.js' %}"></script>
 
 <script>
     const shareToTwitter = document.getElementById("shareToTwitter")

@@ -1,0 +1,35 @@
+{% extends 'user/adminBase.html' %}
+
+{% load static %}
+
+{% block adminContent %}
+
+<div class="adminCreateWritingPage">
+    <div class="container">
+        <form id="form" action="" method="POST">
+            <div class="authorOptionBox">
+                <h2>Choose Author</h2>
+                <input id="searchAuthor" type="text" name="" id="">
+                <div class="authorResult">
+
+                </div>
+                <h2>Author</h2>
+                <div class="toBeAuthor">
+
+                </div>
+            </div>
+            {% csrf_token %}
+            {{form.media}}
+            {% for field in form %}
+                {{field.label_tag }}
+                {{field.errors }}
+                {{field}}
+            {% endfor %}
+            <button id="submitButton" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script src="{% static 'js/admin/adminCreateWriting.js' %}"></script>
+
+{% endblock %}

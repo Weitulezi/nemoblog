@@ -18,24 +18,16 @@
     box-shadow: 0px 0px 35px 9px rgba(107, 107, 107, 0.75);
 }
 
-/* .comic-page .header .title-wrapper {
-    padding: 8px 30px;
-    border-radius: 10px; 
-    padding: 2px 40px;
-    background-color: rgba(44, 44, 44, 0.8);
-    border: 5px white solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.comic-page .header h1 {
-    color: rgb(255, 255, 255);
-    font-size: 60px;
-    letter-spacing: 8px;
+.comic-page #headerTitle {
+    background-color: rgb(255, 255, 255, 0.8);
+    font-size: 80px;
+    padding: 0px 25px;
+    color: rgb(65, 65, 65);
+    border: 5px solid rgb(65, 65, 65);
+    /* border-radius: 10px; */
+    letter-spacing: 3px;
     font-weight: 100;
-} */
-
+}
 
 .comic-page .comic-wrapper {
     /* background-color: antiquewhite; */
@@ -114,23 +106,20 @@
 /* RESPONSIVE */
 @media only screen and (max-width: 400px) { 
     .comic-page .header {
-        height: 25vh;
+        height: 10vh;
+        border-image-width: 100%;
     }
 
-    /* .comic-page .header .title-wrapper {
-        padding: 8px 0px;
-        border-radius: 10px; 
-        padding: 2px 40px;
-        background-color: rgba(44, 44, 44, 0.8);
-        border: 5px white solid;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .comic-page #headerTitle {
+        background-color: rgb(255, 255, 255, 0.8);
+        padding: 0px 25px;
+        font-size: 40px;
+        color: rgb(65, 65, 65);
+        border: 5px solid rgb(65, 65, 65);
+        /* border-radius: 10px; */
+        letter-spacing: 3px;
+        font-weight: 100;
     }
-
-    .comic-page .header h1 {
-        font-size: 20px;
-    } */
 
     .comic-page .comic-wrapper {
         width: 290px;

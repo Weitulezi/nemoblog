@@ -14,6 +14,8 @@
 
 .writing-detail-page .title h1 {
     text-align: center;
+    color: rgb(68, 68, 68);
+    font-size: 50px;
 }
 
 .writing-detail-page .image-cover {
@@ -33,9 +35,16 @@
     margin: 25px auto;
 }
 
-.writing-detail-page .author h4 {
+.writing-detail-page .wrapper .author h4 {
     text-align: center;
+    letter-spacing: 1px;
 }
+
+.writing-detail-page .wrapper .author a {
+    text-decoration: none;
+    color: teal;
+}
+
 
 .writing-detail-page .content {
     width: 700px;
@@ -53,6 +62,59 @@
     font-size: 19px;
 }
 
+.writing-detail-page .contentAuthorBox {
+    margin: 150px auto 150px auto;
+    width: 700px;
+}
+
+.writing-detail-page .contentAuthorBox h1 {
+    text-align: center;
+    color: teal;
+    font-weight: 100;
+}
+
+.writing-detail-page .authorBox {
+    border: 2px solid rgb(185, 185, 185);
+    border-radius: 15px;
+    margin: 20px 0px;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.writing-detail-page .authorHeader {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.writing-detail-page .authorPhoto {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+}
+
+.writing-detail-page .authorPhoto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgb(185, 185, 185);
+}
+
+.writing-detail-page .authorName {
+    font-size: 24px;
+}
+
+.writing-detail-page .authorName a {
+    text-decoration: none;
+    color: teal;
+    font-weight: 700;
+}
+
+.writing-detail-page .authorDescription {
+    line-height: 1.6;
+}
 
 .writing-share {
     position: relative;
@@ -83,7 +145,6 @@
 
 
 
-
 /* RESPONSIVE */
 @media only screen and (max-width: 460px) { 
     .writing-detail-page .title {
@@ -107,8 +168,19 @@
 }
 
 @media only screen and (max-width: 760px){
+    .writing-detail-page {
+        display: block;
+    }
+
     .writing-detail-page .title {
-        max-width: 400px;
+        width: 100%;
+    }
+
+    .writing-detail-page .title h1 {
+        margin: 0px 10px;
+        text-align: center;
+        color: rgb(68, 68, 68);
+        font-size: 20px;
     }
 
     .writing-detail-page .image-cover {
@@ -124,6 +196,11 @@
         max-width: 400px;
         margin: 25px auto;
         word-break: break-all;
+    }
+
+    .writing-detail-page .contentAuthorBox {
+        margin: 150px auto 150px auto;
+        width: 90%;
     }
 
     .writing-share {

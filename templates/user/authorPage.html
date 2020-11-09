@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+    {% include "user_navbar.html" %}
+{% else %}
+    {% include "navbar.html" %}
+{% endif %}
+
+<div class="authorPage">
+    <div class="container">
+        <div class="authorBox">
+            {% if author.profile_photo %}
+                <div class="imageBox">
+                    <img src="{{author.profile_photo}}" alt="">
+                </div>
+            {% endif %}
+            <div class="authorName">
+                {{author.name}}
+            </div>
+            <div class="description">
+                {{author.description|safe}}
+            </div>
+        </div>
+        <div class="authorContent">
+            {% if writings %}
+            <div class="writinWrapper">
+                <h1 id="writingTitle">-- Writing --</h1>
+                {% for writing in writings %}
+                    <div class="writingBox">
+                        <a href="{% url 'writing_detail' writing.id %}">{{writing.title}}</a>
+                    </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% if comics %}
+            <div class="comicWrapper">
+                <h1 id="comicTitle">-- Comic --</h1>
+                {% for comic in comics %}
+                    <div class="comicBox">
+                        <a href="{% url 'comic_detail' comic.id %}">{{comic.title}}</a>
+                    </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

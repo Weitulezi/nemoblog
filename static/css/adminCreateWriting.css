@@ -1,0 +1,100 @@
+.adminCreateWritingPage .container {
+    margin: 10vh 40px;
+    min-height: 90vh;
+    /* border: 5px solid rgb(128, 128, 128); */
+}
+
+.adminCreateWritingPage input {
+    display: block;
+    margin: 10px 0px;
+}
+
+.adminCreateWritingPage label {
+    display: block;
+    margin: 10px 0px;
+}
+
+.adminCreateWritingPage textarea {
+    display: block;
+    margin: 10px 0px;
+}
+
+.adminCreateWritingPage button {
+    display: block;
+}
+
+.adminCreateWritingPage .authorOptionBox {
+    margin-bottom: 20px;
+}
+
+.adminCreateWritingPage .authorBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    background-color: rgb(255, 190, 104);;
+    padding: 8px 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+
+.adminCreateWritingPage .addAuthor {
+    background-color: royalblue;
+    border-radius: 5px;
+    padding: 6px 7px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.adminCreateWritingPage .toBeAuthorBox {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    background-color: rgb(255, 190, 104);;
+    color: rgb(54, 54, 54);
+}
+
+.adminCreateWritingPage .removeAuthor {
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgb(255, 62, 62);
+    color: white;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.adminCreateWritingPage #searchAuthor {
+    width: 700px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(139, 139, 139);
+}
+
+.adminCreateWritingPage #id_title  {
+    width: 700px;
+    height: 40px;
+    padding: 0px 10px;
+}
+
+.adminCreateWritingPage #submitButton {
+    display: flex;
+    width: 100%;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(243, 192, 96);
+    color: rgb(73, 73, 73);
+    padding: 8px 0px;
+    font-size: 20px;
+    cursor: pointer;
+}

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .models import Comic, ComicVisited
+from .models import Comic
 
 def comic_view(request):
     comics = Comic.objects.all().filter(isPublic=True).order_by("-id")
@@ -13,15 +13,9 @@ def comic_detail(request, pk):
     if request.user.is_authenticated:
         print("DO NOTHING")
     else:
-        try:
-            obj = ComicVisited.objects.get(comic=comic)
-            obj.addOne()
-            obj.save()
-        except:
-            obj = ComicVisited.objects.create(comic=comic)
-            obj.addOne()
-            obj.save()
+        comic.addViewCount()
+        comic.save()
     if comic.isPublic == False:
         return redirect("comic")
-    context = {"comic": comic}
+    context = {"comic": comic, "id":pk}
     return render(request, "comic/comic_detail.html", context)

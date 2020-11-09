@@ -1,0 +1,98 @@
+.authorPage {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.authorPage .container {
+    width: 700px;
+    margin: 10vh auto;
+}
+
+.authorPage .imageBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.authorPage .imageBox img {
+    max-width: 300px;
+    border: 5px solid rgb(71, 71, 71);
+    border-radius: 50%;
+}
+
+.authorPage .authorName {
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 30px;
+}
+
+.authorPage .description {
+    word-break: break-all;
+}
+
+.authorPage .description p {
+    margin: 15px 0px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.authorPage .writingWrapper {
+    margin: 20px 0px;
+}
+
+.authorPage #writingTitle {
+    margin: 30px 0px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 100;
+}
+
+.authorPage .writingBox {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.authorPage .writingBox a {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.authorPage .comicWrapper {
+    margin: 20px 0px;
+}
+
+.authorPage #comicTitle {
+    margin: 30px 0px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 100;
+}
+
+.authorPage .comicBox {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.authorPage .comicBox a {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 760px) {
+    .authorPage .container {
+        width: 100%;
+        padding: 0px 30px;
+        margin: 10vh auto;
+    }
+
+    .authorPage .imageBox img {
+        max-width: 290px;
+        border: 5px solid rgb(71, 71, 71);
+        border-radius: 50%;
+    }
+}
