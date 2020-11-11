@@ -5,9 +5,8 @@ from django.http import JsonResponse
 from .serializer import WritingSerializer
 from .models import Writing
 
-
+# GET Writing List
 class WritingList(APIView):
-    # GET Writing List
     def get(self, request, format=None):
         if request.user.is_superuser:
             writings = Writing.objects.all().order_by("-id")
@@ -19,7 +18,8 @@ class WritingList(APIView):
     def post(self, request, format=None):
         print("POST REQUEST WRITING LIST")
 
-
+# GET Single Writing
+# DELETE Single Writing
 class SingleWritingApi(APIView):
     def get(self, request, pk, format=None):
         writing = Writing.objects.get(pk=pk, isPublic=True)
@@ -35,6 +35,7 @@ class SingleWritingApi(APIView):
             raise Http404
 
 
+#GET SEARCH Writing
 class SearchWritingApi(APIView):
     def get(self, request, title, format=None):
         if request.user.is_superuser:

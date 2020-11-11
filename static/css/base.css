@@ -12,8 +12,20 @@
     background-color: rgb(32, 32, 32);
     justify-content: center;
     align-items: center;
-    /* border-bottom: 4px solid rgb(58, 58, 58); */
+    border-bottom: 4px solid rgb(255, 255, 255);
     z-index: 100;
+    box-shadow: 0px 0px 35px 9px rgba(92, 92, 92, 0.75);
+}
+
+.bigBoxContainer h1 {
+    margin: 30px 0px;
+    font-weight: 100;
+    font-size: 100px;
+    color: rgb(235, 213, 93);
+    padding: 0px 30px;
+    background-color: rgb(32, 32, 32, 0.8);
+    border: 2px solid rgb(235, 213, 93);
+    /* border-radius: 10px; */
 }
 
 .bigBoxContainer .bigBox {
@@ -59,10 +71,75 @@
     border-radius: 50%;
 }
 
+body #logoutConfirmWrapper {
+    z-index: 200;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+body #logoutConfirmWrapper #logoutConfirm {
+    border: 3px solid rgb(65, 65, 65);
+    border-radius: 5px;
+    width: 360px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);;
+}
+
+body #logoutConfirmWrapper #logoutConfirm h1 {
+    margin-bottom: 15px;
+}
+
+body #logoutConfirmWrapper #logoutConfirm #yesLogout {
+    background-color: rgb(255, 66, 66);
+    color: white;
+    font-size: 17px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 0px 5px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+body #logoutConfirmWrapper #logoutConfirm #noLogout {
+    cursor: pointer;
+    background-color: rgb(66, 142, 255);
+    color: white;
+    font-size: 17px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 0px 5px;
+    letter-spacing: 2px;
+}
+
 @media only screen and (max-width: 1000px) {
     .curtainButton {
         display: none;
     }
+
+    .bigBoxContainer h1 {
+        margin: 30px 0px;
+        font-weight: 100;
+        font-size: 50px;
+        color: rgb(235, 213, 93);
+        padding: 0px 10px;
+        background-color: rgb(32, 32, 32, 0.8);
+        border: 2px solid rgb(235, 213, 93);
+        /* border-radius: 10px; */
+    }
+    
 
     .bigBoxContainer .bigBox a {
         margin: 0px 5px;

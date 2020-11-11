@@ -1,97 +1,73 @@
-.nav-wrapper {
-    position: relative;
-    top: 0px;
-    width: 100%;
-    height: 10vh;
-    background-color: rgb(255, 255, 255);
-    /* background-color:  rgb(32, 32, 32);; */
+.navWrapper {
     display: flex;
     justify-content: center;
+    height: 10vh;
 }
 
-nav {
+nav   {
     position: fixed;
-    display: flex;
-    justify-content: center;
-    height: 10vh;
-    align-items: center;
-    background-color: white;
+    top: 0px;
+    left: 0px;
     width: 100%;
-    /* border-bottom: 5px solid rgb(104, 104, 104); */
-    box-shadow: 0px 10px 5px -8px rgb(73, 73, 73);
+    margin: 0px auto;
+    background-color: white;
+    height: 10vh;
+    box-shadow: 0px 1px 13px 0px rgba(156, 156, 156, 0.72);
 }
 
-nav a {
+.navWrapper nav .container {
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav  a{
     text-decoration: none;
-    margin: 0px 15px;
-    font-size: 20px;
-    font-weight: 100;
-    color: rgb(75, 75, 75);
-    /* color: white; */
-    /* color: rgb(233, 217, 127); */
 }
 
-nav .block {
-    width: 10px;
-    height: 2px;
+nav .logo h3{
+    color: rgb(78, 78, 78);
+    letter-spacing: 2px;
+    font-weight: 500;
 }
 
-nav .newNav {
-    display: none;
+nav .link {
+    display: flex;
+    align-items: center;
 }
 
-nav #burger {
-    display: none;
+nav .link #navHamburger {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    margin-left: 50px;
 }
 
+nav .link a {
+    margin-left: 50px;
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+    font-size: 17px;
+    letter-spacing: 2px;
+}
 
-@media only screen and (max-width: 500px) {
-    nav {
-        position: fixed;
-        display: flex;
-        justify-content: space-around;
-        height: max-content;
-        padding: 5px;
-        align-items: center;
-    }
+nav .logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 50%;
+}
 
-    nav a {
-        text-decoration: none;
-        margin: 10px 0px;
-        font-size: 20px;
-        color: rgb(75, 75, 75);
-    }
-
-    nav h3 {
+@media only screen and (max-width: 767px) {
+    nav .link a {
         display: none;
     }
-
-    nav #burger {
-        cursor: pointer;
-        display: block;
-    }
-
-    nav .block {
-        width: 5vh;
-        height: 3px;
-        background-color: rgb(94, 94, 94);
-        margin: 5px 0px;
-    }
-    
-    #closeNav {
-        display: flex;
-        justify-content: center;
-    }
-
-    nav .newNav {
-        display: none;
-    }
-
-    /* nav .newNav a {
-        display: flex;
-        justify-content: center;
-        padding: 3px 15px;
-        background-color: black;
-        color: white;
-    } */
 }

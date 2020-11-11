@@ -6,13 +6,17 @@ adminLogout.addEventListener("click", (e) => {
         <div class="logoutConfirm">
             <h3>Are you sure?</h3>
             <div class="logoutAction">
-                <a href="/logout">Yes</a>
+                <a id="yesLogoutAdmin" href="/logout">Yes</a>
                 <a class="logoutNo" href="">No</a>
             </div>
         </div>
     `
     adminLogoutBox.innerHTML += box
     adminLogoutBox.style.display = "flex"
+    let yesLogout = document.getElementById("yesLogoutAdmin")
+    yesLogout.focus()
+    
+    // Else Cancel Logout
     let cancelLogout = document.querySelector(".logoutNo")
     cancelLogout.addEventListener("click", (e) => {
         e.preventDefault()

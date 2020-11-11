@@ -5,8 +5,57 @@
     font-family: 'Zilla Slab', serif;
 }
 
+.index-page .landingSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin-bottom: 10vh;
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+}
 
+.index-page .landingSection .image {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 50%;
+}
 
+.index-page .landingSection img {
+    width: 100%;
+    height: 100%;
+}
+
+.index-page .landingSection h1 {
+    margin: 15px;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 100;
+    color:rgb(83, 83, 83);
+    padding: 0px 15px;
+    border: 3px solid rgb(102, 102, 102);
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+
+.index-page .landingSection #motto {
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(56, 56, 56);;
+    padding: 3px 10px;
+    width: max-content;
+    border: 2px solid  rgb(102, 102, 102);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 0.8);
+}
 
 .index-page .header {
     margin-bottom: 80px;
@@ -257,7 +306,56 @@
 
 /* RESPONSIVE */
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 920px) {    
+    .index-page .landingSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+        margin-bottom: 10vh;
+        background-color: rgb(255, 255, 255);
+        background-position: center;
+        background-size: 400px 400px;
+        background-repeat: no-repeat;
+    }
+    
+
+    .index-page .landingSection .image {
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        margin: 10px auto;
+        background-color: white;
+        border-radius: 50%;
+    }
+    
+    .index-page .landingSection h1 {
+        margin: 15px auto;
+        text-align: center;
+        font-size: 60px;
+        font-weight: 100;
+        color:rgb(83, 83, 83);
+        width: max-content;
+        padding: 0px 10px;
+        border: 3px solid rgb(102, 102, 102);
+        background-color: rgb(255, 255, 255, 0.7);
+        border-radius: 10px;
+    }
+    
+    .index-page .landingSection #motto {
+        display: block;
+        margin: 15px auto;
+        text-align: center;
+        font-size: 16px;
+        color: rgb(56, 56, 56);;
+        padding: 3px 10px;
+        width: max-content;
+        border: 2px solid  rgb(102, 102, 102);
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255, 0.8);
+    }
+
     .index-page .header {
         margin-bottom: 80px;
         height: 90vh;

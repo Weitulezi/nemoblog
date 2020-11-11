@@ -14,8 +14,6 @@ from .forms import LoginForm, WritingForm, ComicForm, DrawingForm
 from .signals import create_profile
 
 def login_view(request):
-    if request.user.is_authenticated:
-        return redirect("index")
     form = LoginForm()
     if request.method == "POST":
         form = LoginForm(request.POST)
@@ -26,7 +24,7 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect("writing")
+                return redirect(request.GET["next"])
             else:
                 context = {"form": form, "error": "Username and password is invalid"}        
                 return render(request, "user/login.html", context)        
@@ -54,9 +52,6 @@ def author_view(request, name):
 
 
 # ADMIN RELATED VIEW
-
-
-
 @login_required
 def admin_view(request):
     if request.user.is_authenticated and request.user.is_superuser:
@@ -64,7 +59,6 @@ def admin_view(request):
         return render(request, "user/admin.html", context)
     else:
         raise Http404
-
 
 @login_required
 def admin_user_view(request):
@@ -115,8 +109,21 @@ def admin_create_writing_view(request):
 
 @login_required
 def admin_edit_writing_view(request, pk):
-    context= {}
-    return render(request, "user/editWriting.html", context)
+    writing = Writing.objects.get(pk=pk)
+    form = WritingForm(instance=writing)
+    if request.method == "POST":
+        form = WritingForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            writing.title = data["title"]
+            writing.image_cover = data["image_cover"]
+            writing.description = data["description"]
+            writing.content = data["content"]
+            writing.isPublic = data["isPublic"]
+            writing.save()
+            return redirect("/admin/writing")
+    context= {"form": form}
+    return render(request, "user/adminEditWriting.html", context)
 
 
 @login_required
@@ -151,6 +158,12 @@ def admin_create_comic_view(request):
             return JsonResponse({"success": False, "message": form.errors})
     context = {"form": form}
     return render(request, "user/adminCreateComic.html", context)
+
+
+@login_required
+def admin_edit_comic_view(request, pk):
+    context = {}
+    return render(request, "user/adminEditComic.html", context)
 
 
 @login_required

@@ -5,7 +5,7 @@ from .models import Drawing
 import json
 
 def drawingList_view(request):
-    drawings = Drawing.objects.all().filter(isPublic=True).order_by("-view_count")
+    drawings = Drawing.objects.all().filter(isPublic=True).order_by("-id")
     context = {"drawings":drawings}
     return render(request, "drawing/drawing.html", context)
 

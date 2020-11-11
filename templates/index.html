@@ -2,16 +2,18 @@
 
 {% load static %}
 
+
 {% block content %}
 
-<div class="index-page" >
+{% include "navbar.html" %}
 
-    <div class="header" style="background-image: url({% static 'images/nudityart.jpeg' %});">
-        <div id="headerTitle" class="wrapper">
+<div class="index-page" >
+    <div class="landingSection" style="background-image: url({% static 'images/nudityart.jpeg' %});">
+        <div class="title">
             <h1>Metagius</h1>
+            <p id="motto">Liberté, égalité, fraternité.</p>
         </div>
     </div>
-
 
     <div class="section">
         <div class="container">
@@ -63,11 +65,11 @@
         </div>
     </div>
 
-    <div class="contributeSection">
+    <!-- <div class="contributeSection">
         <div class="container">
             <h1>Intrested to contribute?</h1>
         </div>
-    </div>
+    </div> -->
 
     <div class="section-contact">
         <div class="wrapper">

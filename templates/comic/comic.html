@@ -4,12 +4,7 @@
 
 {% block content %}
 
-{% if request.user.is_authenticated %}
-    {% include "user_navbar.html" %}
-{% else %}
-    {% include "navbar.html" %}
-{% endif %}
-
+{% include "navbar.html" %}
 
 <div class="comic-page">
     <div class="wrapper">

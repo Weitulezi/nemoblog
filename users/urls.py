@@ -13,6 +13,7 @@ urlpatterns = [
 
     path('admin/comic/', views.admin_comic_view, name="admin_comic_view"),
     path('admin/create/comic/', views.admin_create_comic_view, name="admin_create_comic_view"),
+    path('admin/comic/<int:pk>/', views.admin_edit_comic_view, name="admin_edit_comic_view"),
 
     path('admin/drawing/', views.admin_drawing_view, name="admin_drawing_view"),
     path('admin/create/drawing/', views.admin_create_drawing_view, name="admin_create_drawing_view"),

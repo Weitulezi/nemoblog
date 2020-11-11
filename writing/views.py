@@ -12,12 +12,11 @@ def writing_view(request):
 
 def writing_detail(request, pk):
     writing = Writing.objects.get(pk=pk)
-    if request.user.is_authenticated:
-        print("DO NOTHING")
-    else:
-        writing.addViewCount()
-        writing.save()
     if writing.isPublic == False:
         return redirect("writing")
+    if not request.user.is_authenticated:
+        writing.addViewCount()
+        writing.save()
     context = {"writing":writing, "id": pk}
     return render(request, "writing/writing_detail.html", context)
+    

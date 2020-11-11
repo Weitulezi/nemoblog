@@ -10,12 +10,10 @@ def comic_view(request):
 
 def comic_detail(request, pk):
     comic = Comic.objects.get(pk=pk)
-    if request.user.is_authenticated:
-        print("DO NOTHING")
-    else:
-        comic.addViewCount()
-        comic.save()
     if comic.isPublic == False:
         return redirect("comic")
+    if not request.user.is_authenticated:
+        comic.addViewCount()
+        comic.save()
     context = {"comic": comic, "id":pk}
     return render(request, "comic/comic_detail.html", context)

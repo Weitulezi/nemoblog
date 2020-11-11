@@ -1,0 +1,22 @@
+{% extends 'user/adminBase.html' %}
+
+{% load static %}
+
+{% block adminContent %}
+
+<div class="adminEditWritingPage">
+    <div class="container">
+        <h1>Edit Writing:</h1>
+        <form id="form" action="" method="POST">
+            {% csrf_token %}
+            {{form.media}}
+            {% for field in form %}
+                {{field.label_tag}}
+                {{field}}
+            {% endfor %}
+            <button id="submitButton" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

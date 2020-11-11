@@ -1,22 +1,25 @@
-<div class="nav-wrapper">
-    <nav class="navbar">
-        <h3><a href="{% url 'index' %}">Home</a></h3>
-        <h3><a href="{% url 'writing' %}">Writing</a></h3>
-        <h3><a href="{% url 'comic' %}">Comics</a></h3>
-        <h3><a href="{% url 'drawing' %}">Drawing</a></h3>
-        <h3><a href="{% url 'about_view' %}">About</a></h3>
-        <h3 id="burger">
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-        </h3>
-        <div class="newNav">
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'writing' %}">Writing</a>
-            <a href="{% url 'comic' %}">Comics</a>
-            <a href="{% url 'drawing' %}">Drawing</a>
-            <a href="{% url 'about_view' %}">About</a>
-            <a id="closeNav" href="">&#x2716;</a>
+{% load static %}
+
+<div class="navWrapper">
+    <nav>
+        <div class="container">
+            <a href="/">
+                <div class="logo">
+                    <img src="{% static 'images/m19logo2.png' %}" alt="">
+                    <h3>Metagius</h3>
+                </div>
+            </a>
+            <div class="link">
+                <a href="/writing">Writing</a>
+                <a href="/comic">Comic</a>
+                <a href="/drawing">Drawing</a>
+                <a href="/about">About</a>
+                {% if request.user.is_authenticated %}
+                    <a href="/profile">Welcome, {{request.user}}</a>
+                    <a id="logout" href="/logout">Logout</a>
+                {% endif %}
+                <img id="navHamburger" src="{% static 'images/hamburger.webp' %}" alt="">
+            </div>
         </div>
     </nav>
 </div>
